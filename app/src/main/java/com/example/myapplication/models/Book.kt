@@ -20,3 +20,15 @@ data class Book(
     @SerializedName("updatedAt") val updatedAt: String,
     @SerializedName("updatedBy") val updatedBy: String
 )
+
+data class Meta(
+    val currentPage: Int,
+    val pageSize: Int,
+    val totalPages: Int,
+    val total: Int
+)
+
+data class BookData(
+    val meta: Meta,
+    val data: List<Book>
+)
